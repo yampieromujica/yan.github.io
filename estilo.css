@@ -1,0 +1,334 @@
+:root {
+    --fuente: #ffffff;
+}
+
+* {
+    margin: 0;
+    margin-top: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #000000;
+    font-size: 18px;
+    font-family: "belleza";
+    padding: 0 0 0;
+    color: var(--fuente);
+    min-height: 100%;
+}
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0 rgba (0, 0, 0, 0.75);
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+
+.grid-container {
+    margin: 10px 70px;
+    display: grid;
+    gap: 10px;
+    grid-template:
+        "header header header"80px "main main aside"auto "main-2 main-2 main-2"auto "main-3 main-3 main-3"auto "main-4 main-4 main-4"auto "footer footer footer"40px/ 700px auto;
+}
+
+/*HEAER*/
+
+.header {
+    grid-area: header;
+    background-color: #3f3145;
+    height: 80px;
+    padding-right: 0px;
+}
+
+/*NAV*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+   /* max-width: 980px;
+    margin: 0 auto;*/
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+}
+
+.nav-menu-item {
+    font-size: 16px;
+    margin: 0 5px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+.nav-menu-link {
+    color: var(--fuente);
+}
+
+.logo {
+    color: var(--fuente);
+    font-size: 35px;
+    font-family: "kicking limos";
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+    margin-left: 0;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover {
+    background: #564c5a;
+    transition: 0, 5s;
+}
+
+
+/*      
+        MAIN
+*/
+
+.main {
+    grid-area: main;
+    background: #035c58;
+    padding: 10px 15px;
+}
+
+.logotipo img {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    border-radius: 20px;
+    background: transparent;
+    border: 20px solid rgba(0, 0, 0, 0.12);
+    margin: 1.5em auto;
+    max-width: 35%;
+}
+
+.logotipo {
+    width: 50%;
+    display: flex;
+    padding: 10px 0;
+}
+
+span {
+    color: yellow;
+}
+
+.main ul li {
+    list-style: none;
+}
+
+/*
+    main-2
+*/
+.main-2 {
+    grid-area: main-2;
+    background: #233931;
+    padding: 10px 15px;
+}
+
+.yampi img {
+    display: flex;
+    padding: 5px 0px;
+    width: 20%;
+    border-radius: 50%;
+    padding-right: 5px;
+    background: transparent;
+    border: 20px solid rgba(0, 0, 0, 0.12);
+    margin: 1.5em auto;
+}
+
+/*
+    MAIN-3
+*/
+.main-3 {
+    grid-area: main-3;
+    background: #6a4e19;
+    padding: 10px 15px;
+    
+}
+
+.beat {
+    display: inline-flex;
+    width: 50%
+    color: yellow;
+}
+
+.beat p {
+    margin-bottom: 20px;
+}
+
+/*
+        MAIN-4
+*/
+.main-4 {
+    grid-area: main-4;
+    background: #3f2345;
+    padding: 20px;
+    box-sizing:
+}
+
+.redes {
+    display: grid;
+    background: var(--fuente);
+    border-radius: 10px;
+    padding: 10px 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+}
+
+.redes div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.redes p {
+    color: #000;
+    text-align: center;
+}
+
+/*ASIDE*/
+
+.aside {
+    grid-area: aside;
+    background: #ce3509;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.lanzamientos {
+    display:inline-grid;
+    background-color: #d43f2b;
+    margin: 20px;
+    border-radius: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+
+}
+
+
+.lanzamientos div img {
+    display: flex;
+    width: 70%;
+    background: transparent;
+    border: 20px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin: 1.5em auto;
+}
+
+.text,
+h2 {
+    text-align: center;
+}
+
+.img img {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    margin-top: 5%;
+}
+
+/*FOOTER*/
+
+.footer {
+    grid-area: footer;
+    background-color: #555;
+    text-align: center;
+    color: var(--fuente);
+}
+
+.footer p {
+    font-size: 15px;
+}
+
+/*RESPONSIVE*/
+/*@media (max-width: 350px){
+    .grid-container {
+    margin: 10px 50px;
+    display: grid;
+    gap: 10px;
+    grid-template:
+        "header header"80px "main aside"auto "main-2 main-2"auto "main-3 main-3"auto "main-4 main-4"auto "footer footer"40px/
+        auto;
+}
+}*/
+
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        margin: 0 0;
+        display: grid;
+        gap: 10px;
+        grid-template:
+            "header"80px "main"auto "main-2"auto "main-3"auto "aside"auto "main-4"auto "footer"40px;
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
+       
+    }
+    
+    .nav{ 
+        display: grid;
+        gap:1.em;
+        padding: 20px 0 0 0;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, mimax(300px,1fr
+        ));
+    }
+    
+    .nav-menu{
+        padding: 0;
+        margin: 0 auto;
+        display: grid;
+        justify-content:end;
+        grid-auto-flow: column;
+        gap:1em;
+    }
+    .nav-menu-item{
+        font-weight:normal;
+        padding: 0 0 0 0;
+        margin-bottom: 0;
+        line-height: 65px;
+    }
+    
+    .logo {
+        padding: 0 15px;
+        line-height: 0px;
+        margin: 0 auto;
+    }
+
+    .yampi img {
+        display: block;
+        margin: 0 0 10 0px;
+        width: 90%;
+        border-radius: 0px;
+    }
+   
+.logotipo {
+    width: 100%;
+} 
+    
+.logotipo img {
+    display: block;
+    margin: 0 0 10 0px;
+    max-width: 90%;
+}
+
+}
